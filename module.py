@@ -25,11 +25,11 @@ Your solutions must pass the automated test runner.
 #   - Must return a Boolean value (True or False).
 #   - Do NOT print anything.
 #
-def is_even(num: int) -> bool:
+'''def is_even(num: int) -> bool:
     if num % 2 == 0:
        return True
     else:
-       return False
+       return False'''
 
 # -------------------------------------------------
 # count_vowels
@@ -51,12 +51,14 @@ def is_even(num: int) -> bool:
 #   - Must return an integer.
 #   - Do NOT print anything.
 #
-def count_vowels(s: str) -> int:
+'''def count_vowels(s: str) -> int:
     vowels = ["a","e","i","o","u"]
     output = 0
-    if char.lower() not in vowels:
-        output += i
-    return output
+    for char in s:
+        if char.lower() in vowels:
+            output += 1
+        
+    return output'''
     
 
 # -------------------------------------------------
@@ -76,7 +78,13 @@ def count_vowels(s: str) -> int:
 #   - Do NOT use built-in reverse() method.
 #
 def reverse_string(s: str) -> str:
-    pass
+  output = "" 
+  index = len(s) - 1
+  while index >= 0:
+     char = s[index]
+     output += char
+     index -= 1
+  return output
 
 
 # -------------------------------------------------
